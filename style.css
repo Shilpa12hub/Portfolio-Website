@@ -2,9 +2,10 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: #0f0f0f;
     color: white;
     text-align: center;
+
+    background: radial-gradient(circle at top, #1a1a1a, #000);
 }
 
 /* HERO */
@@ -38,11 +39,10 @@ h1 {
 
 /* PROFILE IMAGE (square) */
 .profile {
-    width: 220px;
-    height: 220px;
+    width: 260px;
+    height: 260px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.4s;
 }
 
 .profile:hover {
@@ -115,4 +115,32 @@ h1 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+.about p {
+    max-width: 500px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+.socials {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.socials i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.socials i:hover {
+    transform: scale(1.3);
+    color: #00adb5;
+}
+.card-box {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 20px auto;
 }
