@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f0f0f;
+    color: white;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #1a1a1a, #000);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.section {
+    padding: 40px;
+    text-align: center;
+}
