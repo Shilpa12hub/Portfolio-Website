@@ -28,14 +28,20 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 // Typing animation
 const tagEl = document.querySelector('.hero-tag');
 const tagText = '✦ Welcome to my portfolio';
-tagEl.textContent = '';
+
 let i = 0;
-setTimeout(() => {
-    const type = () => {
-        if (i < tagText.length) {
-            tagEl.textContent += tagText[i++];
-            setTimeout(type, 55);
-        }
-    };
-    type();
-}, 400);
+
+function typeEffect() {
+    if (i < tagText.length) {
+        tagEl.textContent += tagText[i++];
+        setTimeout(typeEffect, 55);
+    } else {
+        setTimeout(() => {
+            tagEl.textContent = '';
+            i = 0;
+            typeEffect(); // restart
+        }, 1500); // pause before restart
+    }
+}
+
+setTimeout(typeEffect, 400);
