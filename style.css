@@ -656,3 +656,20 @@ footer strong { color: var(--accent); }
 
     .skills { justify-content: center; }
 }
+.about-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.about-tag span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 5px 14px;
+    border-radius: 20px;
+}
