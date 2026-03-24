@@ -525,6 +525,13 @@ a { color: inherit; text-decoration: none; }
 .fa-html5  { color: #e34c26; }
 .fa-css3-alt { color: #264de4; }
 .fa-js     { color: #f0db4f; }
+.fa-java {
+    color: #f89820;
+}
+
+.fa-python {
+    color: #3776ab;
+}
 
 .skill p {
     font-size: 12px;
