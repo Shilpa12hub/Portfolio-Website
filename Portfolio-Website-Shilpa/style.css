@@ -525,6 +525,8 @@ a { color: inherit; text-decoration: none; }
 .fa-html5  { color: #e34c26; }
 .fa-css3-alt { color: #264de4; }
 .fa-js     { color: #f0db4f; }
+.fa-java   { color: #f89820; }
+.fa-python { color: #3572A5; }
 
 .skill p {
     font-size: 12px;
@@ -655,4 +657,21 @@ footer strong { color: var(--accent); }
     .contact-box { width: 100%; }
 
     .skills { justify-content: center; }
+}
+.about-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.about-tag span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 5px 14px;
+    border-radius: 20px;
 }
