@@ -1,12 +1,27 @@
-window.addEventListener("scroll", function () {
-    const reveals = document.querySelectorAll(".reveal");
+// ---- NAV: add scrolled class ----
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+});
 
-    reveals.forEach((el) => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
+// ---- SCROLL REVEAL ----
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.12 });
 
-        if (elementTop < windowHeight - 100) {
-            el.classList.add("active");
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ---- SMOOTH NAV SCROLL ----
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
         }
     });
 });
