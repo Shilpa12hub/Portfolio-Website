@@ -769,11 +769,11 @@ footer strong { color: var(--accent); }
   text-align: center;
   font-size: 28px;
   margin-top: 40px;
-  color: #38bdf8;
+  color: #481ac7;
 }
 .project-card {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 .bracket {
-  color: #38bdf8; /* blue accent */
+  color: #481ac7; /* blue accent */
 }
